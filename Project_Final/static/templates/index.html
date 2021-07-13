@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>MNIST Handwritten text recognition using keras</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
+  </style>
+  </head>
+  
+  <body>
+    <div class="container">
+      <div class="header clearfix">
+        <h3 class="text-muted">Text Recognition Model</h3>
+      </div>
+      <div class="jumbotron">
+        <h3 class="jumbotronHeading">Draw inside this Box!</h3>
+        <div class="centered">
+          <canvas id="canvas" width="250" height="250" style="border: 5px solid black"></canvas>
+        </div>
+        <div class="centered">
+          <input type="button" class="myButton" value="Predict" style="">
+          <button onclick="clearcanvas()">Reset</button>
+          
+        </div>
+        <div class="centered">
+          <h1 id="result"></h1>
+        </div>
+
+    </div>
+
+   
+   
+    <div class="jumbotron">
+      <h3 class="jumbotronHeading">Upload Image!</h3>
+      <main role="main" class="container mt-5">
+        <div class="row">
+        </div>
+        <div class="row">
+          <form action="../uploader" method="POST" enctype="multipart/form-data">
+            <input type='file' name='file' onchange="readURL(this);" />
+            <img id="img" src="#" alt="your image" />
+            <button type="submit">Submit & predict</button>
+            <button type="reset" class="myButton" value="Reset">Reset</button>
+      
+        </form>
+        </div> 
+   
+        
+      </div>
+   
+    </main>
+    <script src="../index.js"></script>
+    <script src="../index-1.js"></script>
+</body>
+
+</html>
+
+
